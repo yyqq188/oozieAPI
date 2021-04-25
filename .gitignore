@@ -1,5 +1,5 @@
 /src/main/resources
-pom.xml
 logs
 .idea
 target
+*.iml
