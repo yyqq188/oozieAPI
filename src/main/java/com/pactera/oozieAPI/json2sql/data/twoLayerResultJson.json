@@ -1,0 +1,10 @@
+{
+  "分层1": {
+    "profile_rule": "select user_code from user where clickTimes > 5",
+    "event_rule": "select user_code from event where time_params between 2021-03-01 and 2021-03-02 and user_code in (select user_code from event tf where tf.$distinct_id = '11' and tf.$distinct_id = '2') and event_name = '$AppViewScreen' group by user_code having general(1) = '22'"
+  },
+  "分层2": {
+    "profile_rule": "select user_code from user where clickTimes > 5",
+    "event_rule": "select user_code from event where time_params between 2021-03-01 and 2021-03-31 and user_code in (select user_code from event tf where tf.$distinct_id = '1' and tf.$distinct_id = '1') and event_name = 'AppViewScreen' group by user_code having count(1) = '1'"
+  }
+}

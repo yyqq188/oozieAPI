@@ -1,0 +1,393 @@
+[
+  {
+    "key": 1,
+    "comment": "",
+    "value": "分层1",
+    "type": "rules_relation",
+    "relation": "and",
+    "closable": false,
+    "rules": [
+      {
+        "type": "rules_relation",
+        "relation": "and",
+        "rules": [
+          {
+            "type": "profile_rule",
+            "field": "user.clickTimes",
+            "function": "gt",
+            "params": [
+              "5"
+            ]
+          },
+          {
+            "type": "rules_relation",
+            "relation": "and",
+            "rules": [
+              {
+                "type": "profile_rule",
+                "field": "user.clickTimes",
+                "function": "eq",
+                "params": [
+                  "6"
+                ]
+              },
+              {
+                "type": "profile_rule",
+                "field": "user.clickTimes",
+                "function": "gt",
+                "params": [
+                  "7"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "profile_rule",
+            "field": "user.clickTimes",
+            "function": "gt",
+            "params": [
+              "8"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "rules_relation",
+        "relation": "and",
+        "rules": [
+          {
+            "type": "rules_relation",
+            "relation": "and",
+            "rules": [
+              {
+                "measure": {
+                  "aggregator": "general",
+                  "field": "",
+                  "type": "event_measure",
+                  "event_name": "$AppViewScreen"
+                },
+                "type": "event_rule",
+                "time_function": "absolute_time",
+                "time_params": [
+                  "2021-03-01",
+                  "2021-03-02"
+                ],
+                "params": [
+                  1
+                ],
+                "function": "least",
+                "isdone": "1",
+                "filters": [
+                  {
+                    "type": "filters_relation",
+                    "relation": "and",
+                    "subfilters": [
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "2"
+                        ],
+                        "type": "filter"
+                      },
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "3"
+                        ],
+                        "type": "filter"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "measure": {
+                  "aggregator": "general",
+                  "field": "",
+                  "type": "event_measure",
+                  "event_name": "$AppViewScreen"
+                },
+                "type": "event_rule",
+                "time_function": "absolute_time",
+                "time_params": [
+                  "2021-03-03",
+                  "2021-03-04"
+                ],
+                "params": [
+                  4
+                ],
+                "function": "least",
+                "isdone": "1",
+                "filters": [
+                  {
+                    "type": "filters_relation",
+                    "relation": "and",
+                    "subfilters": [
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "5"
+                        ],
+                        "type": "filter"
+                      },
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "6"
+                        ],
+                        "type": "filter"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "measure": {
+              "aggregator": "general",
+              "field": "",
+              "type": "event_measure",
+              "event_name": "$AppViewScreen"
+            },
+            "type": "event_rule",
+            "time_function": "absolute_time",
+            "time_params": [
+              "2021-03-05",
+              "2021-03-06"
+            ],
+            "params": [
+              7
+            ],
+            "function": "least",
+            "isdone": "1",
+            "filters": [
+              {
+                "type": "filters_relation",
+                "relation": "and",
+                "subfilters": [
+                  {
+                    "field": "event.$AppClick.$distinct_id",
+                    "function": "equal",
+                    "params": [
+                      "8"
+                    ],
+                    "type": "filter"
+                  },
+                  {
+                    "field": "event.$AppClick.$distinct_id",
+                    "function": "equal",
+                    "params": [
+                      "9"
+                    ],
+                    "type": "filter"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "rules_relation",
+            "relation": "and",
+            "rules": [
+              {
+                "measure": {
+                  "aggregator": "general",
+                  "field": "",
+                  "type": "event_measure",
+                  "event_name": "$AppViewScreen"
+                },
+                "type": "event_rule",
+                "time_function": "absolute_time",
+                "time_params": [
+                  "2021-03-07",
+                  "2021-03-08"
+                ],
+                "params": [
+                  10
+                ],
+                "function": "least",
+                "isdone": "1",
+                "filters": [
+                  {
+                    "type": "filters_relation",
+                    "relation": "and",
+                    "subfilters": [
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "11"
+                        ],
+                        "type": "filter"
+                      },
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "12"
+                        ],
+                        "type": "filter"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "measure": {
+                  "aggregator": "general",
+                  "field": "",
+                  "type": "event_measure",
+                  "event_name": "$AppViewScreen"
+                },
+                "type": "event_rule",
+                "time_function": "absolute_time",
+                "time_params": [
+                  "2021-03-09",
+                  "2021-03-10"
+                ],
+                "params": [
+                  13
+                ],
+                "function": "least",
+                "isdone": "1",
+                "filters": [
+                  {
+                    "type": "filters_relation",
+                    "relation": "and",
+                    "subfilters": [
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "14"
+                        ],
+                        "type": "filter"
+                      },
+                      {
+                        "field": "event.$AppClick.$distinct_id",
+                        "function": "equal",
+                        "params": [
+                          "15"
+                        ],
+                        "type": "filter"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "measure": {
+              "aggregator": "general",
+              "field": "",
+              "type": "event_measure",
+              "event_name": "$AppViewScreen"
+            },
+            "type": "event_rule",
+            "time_function": "absolute_time",
+            "time_params": [
+              "2021-03-11",
+              "2021-03-12"
+            ],
+            "params": [
+              16
+            ],
+            "function": "least",
+            "isdone": "1",
+            "filters": [
+              {
+                "type": "filters_relation",
+                "relation": "and",
+                "subfilters": [
+                  {
+                    "field": "event.$AppClick.$distinct_id",
+                    "function": "equal",
+                    "params": [
+                      "17"
+                    ],
+                    "type": "filter"
+                  },
+                  {
+                    "field": "event.$AppClick.$distinct_id",
+                    "function": "equal",
+                    "params": [
+                      "18"
+                    ],
+                    "type": "filter"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": 1,
+    "comment": "",
+    "value": "分层2",
+    "type": "rules_relation",
+    "relation": "and",
+    "closable": false,
+    "rules": [
+      {
+        "type": "profile_rule",
+        "field": "user.clickTimes",
+        "function": "gt",
+        "params": [
+          "5"
+        ]
+      },
+      {
+        "measure": {
+          "aggregator": "count",
+          "field": "",
+          "type": "event_measure",
+          "event_name": "AppViewScreen"
+        },
+        "type": "event_rule",
+        "time_function": "absolute_time",
+        "time_params": [
+          "2021-03-01",
+          "2021-03-31"
+        ],
+        "params": [
+          1
+        ],
+        "function": "least",
+        "isdone": "1",
+        "filters": [
+          {
+            "type": "filters_relation",
+            "relation": "and",
+            "subfilters": [
+              {
+                "field": "event.$AppClick.$distinct_id",
+                "function": "equal",
+                "params": [
+                  "1"
+                ],
+                "type": "filter"
+              },
+              {
+                "field": "event.$AppClick.$distinct_id",
+                "function": "equal",
+                "params": [
+                  "1"
+                ],
+                "type": "filter"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
